@@ -49,7 +49,7 @@ public class FillRatingsActivity extends AppCompatActivity {
         mListaOcen.setAdapter(adapter);
     }
 
-
+/*
     public void ready(View v){
         calculateAverage();
         Intent returnIntent = new Intent();
@@ -65,5 +65,6 @@ public class FillRatingsActivity extends AppCompatActivity {
         stringResult = Double.toString(average);
         return stringResult;
     }
+    */
 
 }
