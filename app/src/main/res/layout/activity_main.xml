@@ -111,24 +111,26 @@
 
     <Button
         android:id="@+id/superButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="15"
         android:visibility="invisible"
-        android:onClick="finish"
+        android:onClick="superButton"
         android:text="Super"
         android:layout_centerInParent="true"
-        app:layout_constraintTop_toBottomOf="@+id/averageResult" />
+        app:layout_constraintTop_toBottomOf="@+id/averageResult"
+        android:gravity="center"/>
 
     <Button
         android:id="@+id/badButton"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="15"
         android:visibility="invisible"
-        android:onClick="finish"
+        android:onClick="badButton"
         android:text="Dupa"
         android:layout_centerInParent="true"
         app:layout_constraintTop_toBottomOf="@+id/averageResult"
+        android:gravity="center"
         />
 </android.support.constraint.ConstraintLayout>
