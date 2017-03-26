@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     public final static String LICZBA_OCEN="liczba ocen";
 
-    private Button przycisk;
+    private Button przycisk, superButton, badButton;
     private EditText nameEdit, ratingCountEdit,lastNameEdit;
     private boolean ratingsCountOk,correctName, correctLastName;
     private String komunikat;
@@ -51,7 +51,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void findViewsById(){
-        przycisk = (Button) findViewById(R.id.niePoszloPrzycisk);
+        przycisk = (Button) findViewById(R.id.buttonOcena);
+        superButton = (Button) findViewById(R.id.superButton);
+        badButton = (Button) findViewById(R.id.badButton);
         nameEdit = (EditText) findViewById(R.id.nameEdit);
         lastNameEdit = (EditText) findViewById(R.id.lastnameEdit);
         ratingCountEdit = (EditText) findViewById(R.id.ratingsCountEdit);
@@ -169,9 +171,18 @@ public class MainActivity extends AppCompatActivity {
 
                 // get String data from Intent
                 String returnString = data.getStringExtra("result");
+                Double aDouble = Double.parseDouble(returnString);
 
                 // set text view with string
                 averageResult.setText(returnString);
+                przycisk.setVisibility(Button.GONE);
+
+                if(aDouble >= 3)
+                superButton.setVisibility(Button.VISIBLE);
+                else
+                    badButton.setVisibility(Button.VISIBLE);
+
+
             }
         }
     }

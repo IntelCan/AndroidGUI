@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -26,6 +27,7 @@ public class FillRatingsActivity extends AppCompatActivity {
     private int mLiczbaOcen;
     private double average = 0;
     private String stringResult;
+    private double suma = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,7 +51,10 @@ public class FillRatingsActivity extends AppCompatActivity {
         mListaOcen.setAdapter(adapter);
     }
 
-/*
+    private void zliczSrednia(RadioGroup grupaOceny) {
+            mDane.get(1);
+    }
+
     public void ready(View v){
         calculateAverage();
         Intent returnIntent = new Intent();
@@ -59,12 +64,13 @@ public class FillRatingsActivity extends AppCompatActivity {
     }
 
     public String calculateAverage(){
-        int liczba = 21;
-        average =((double) liczba)/((double)mLiczbaOcen);
-                //21/mLiczbaOcen;
+        for(int i=0;i<mLiczbaOcen;i++){
+            suma += mDane.get(i).getRating();
+        }
+        average =suma/((double)mLiczbaOcen);
         stringResult = Double.toString(average);
         return stringResult;
     }
-    */
+
 
 }
