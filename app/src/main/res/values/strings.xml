@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">ISM</string>
+    <string name="fillRatings">Lista ocen</string>
+    <string name="przycisk_oceny">Oceny</string>
+    <string name="pusta_liczba_ocen">Nie wprowadziłeś liczby ocen</string>
+    <string name="za_malo_ocen"> Za mała liczba ocen </string>
+    <string name="za_duzo_ocen"> Za dużą liczba ocen </string>
+    <string-array name="sports_array">
+        <item>Shuttle Badminton</item>
+        <item>Tennis</item>
+        <item>FootBall</item>
+        <item>Basket Ball</item>
+        <item>Table Tennis</item>
+        <item>Chess</item>
+        <item>Hockey</item>
+    </string-array>
+</resources>
