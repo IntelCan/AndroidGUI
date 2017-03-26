@@ -158,6 +158,18 @@ public class MainActivity extends AppCompatActivity {
         intent.putExtra(LICZBA_OCEN, Integer.parseInt(ratingCountEdit.getText().toString()));
         startActivityForResult(intent,1);
     }
+
+    public void superButton(View v){
+        Toast.makeText(this, "Gites !!! Zdaane.... można iść na piwo",
+                Toast.LENGTH_LONG).show();
+        finish();
+    }
+
+    public void badButton(View v){
+        Toast.makeText(this, "Bez spiny... są drugie terminy",
+                Toast.LENGTH_LONG).show();
+        finish();
+    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
