@@ -27,16 +27,12 @@ public class InteractiveArrayAdapter extends ArrayAdapter<RatingsModel> {
         this.listaOcen = listaOcen;
     }
     @Override
-    public View getView(int numerWiersza,
-                        View widokDoRecyklingu,
-                        ViewGroup parent) {
+    public View getView(int numerWiersza,View widokDoRecyklingu, ViewGroup parent) {
         View widok = null;
         if (widokDoRecyklingu == null) {
             LayoutInflater pompka = context.getLayoutInflater();
             widok = pompka.inflate(R.layout.row_ratings, null);
-            RadioGroup grupaOceny =
-                    (RadioGroup) widok.
-                            findViewById(R.id.radioGroup);
+            RadioGroup grupaOceny = (RadioGroup) widok.findViewById(R.id.radioGroup);
             grupaOceny.setOnCheckedChangeListener(
                     new RadioGroup.OnCheckedChangeListener() {
                         @Override
@@ -51,18 +47,12 @@ public class InteractiveArrayAdapter extends ArrayAdapter<RatingsModel> {
             grupaOceny.setTag(listaOcen.get(numerWiersza));
         } else {
             widok = widokDoRecyklingu;
-            RadioGroup grupaOceny =
-                    (RadioGroup) widok.
-                            findViewById(R.id.radioGroup);
+            RadioGroup grupaOceny = (RadioGroup) widok.findViewById(R.id.radioGroup);
             grupaOceny.setTag(listaOcen.get(numerWiersza));
         }
-        TextView etykieta =
-                (TextView) widok.
-                        findViewById(R.id.ratingsView);
-        etykieta.setText(
-                listaOcen.get(numerWiersza).getName());
-        RadioGroup grupaOceny = (RadioGroup) widok.
-                findViewById(R.id.radioGroup);
+        TextView etykieta = (TextView) widok.findViewById(R.id.ratingsView);
+        etykieta.setText(listaOcen.get(numerWiersza).getName());
+        RadioGroup grupaOceny = (RadioGroup) widok.findViewById(R.id.radioGroup);
         ustawOcene(grupaOceny, numerWiersza);
         return widok;
     }
